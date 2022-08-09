@@ -12,6 +12,17 @@ function inicio(){
         console.log("click");
         zonaInput.classList.toggle("hide");
     });
-}
 
+}
+function crearDiv(){
+    const miDiv = document.getElementById("miDiv");
+    const parrafo1 = document.createElement("p");
+    const parrafo2 = document.createElement("p");
+    parrafo1.innerHTML="Hola Fernando";
+    parrafo2.innerHTML="Chau Fernando";
+    
+    miDiv.appendChild(parrafo1);
+    miDiv.appendChild(parrafo2);
+}
 inicio();
+crearDiv();
