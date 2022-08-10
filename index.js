@@ -5,7 +5,13 @@ function inicio(){
     var zonaInput = document.getElementById("zonaInput");
     
     textoInput.addEventListener("keyup",()=>{
-        caracteres.innerHTML=`${textoInput.value.length} caracteres`;
+        const cant=textoInput.value.length;
+        if(cant>0){
+            caracteres.innerHTML=`${cant} caracteres`;
+            caracteres.classList.remove("hide");
+        }else{
+            caracteres.classList.add("hide");
+        }
     });
     
     botonInput.addEventListener("click",()=>{
